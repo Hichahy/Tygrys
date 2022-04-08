@@ -5,7 +5,6 @@ import { NavLink, useLocation } from "react-router-dom";
 const Navigation = () => {
   const [burgerMenu, setBurgerMenu] = useState(false);
   const [widthMenu, setWidthMenu] = useState(window.innerWidth);
-  const [showNavlinks, setShowNavlinks] = useState(false);
 
   const closeBurger = () => {
     const input = document.getElementById(
@@ -28,7 +27,6 @@ const Navigation = () => {
   }, [location]);
 
   window.addEventListener("resize", () => setWidthMenu(window.innerWidth));
-  console.log(`widthMenu`, widthMenu);
 
   return (
     <>
