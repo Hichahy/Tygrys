@@ -4,6 +4,7 @@ import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./components/home/Home";
 import Products from "./components/products/Products";
 import "./App.scss";
+import Footer from "./components/footer/Footer";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

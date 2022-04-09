@@ -1,0 +1,65 @@
+footer {
+  background-color: rgba(243, 243, 243, 0.879);
+  min-height: 20rem;
+  padding: 30px;
+
+  .company {
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+  }
+
+  section {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  .info-section {
+    display: flex;
+    flex-direction: column;
+
+    i {
+      margin-right: 10px;
+    }
+
+    a {
+      color: black;
+      font-size: 40px;
+    }
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  .nav-link {
+    padding: 0;
+    color: black;
+  }
+}
+
+@media screen and (min-width: 817px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .section-box {
+      display: flex;
+    }
+
+    section {
+      width: 33.333%;
+      display: flex;
+      flex-direction: column;
+      margin: 0 30px 0 0;
+    }
+  }
+}
