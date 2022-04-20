@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navigation from "./components/navigation/Navigation";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import Home from "./components/home/Home";
 import Products from "./components/products/Products";
 import "./App.scss";
 import Footer from "./components/footer/Footer";
 
 const App = () => {
+  //go up on change location
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
+
   return (
     <div className="app-container">
       <Navigation />

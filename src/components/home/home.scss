@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   background-size: cover;
-  background-image: url("https://scontent.fwaw3-2.fna.fbcdn.net/v/t39.30808-6/242666181_4464615623605674_1723226271686017109_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=4GnCfgSVNIMAX8mFv2X&tn=6_XOfWLM2JdZSdjq&_nc_ht=scontent.fwaw3-2.fna&oh=00_AT8wgvB1lXrUSn68eZ5JZTQJOCPOGNPHmiQg3X2_5HcqxA&oe=62557EEF");
+  background-image: url("../../../public/images/photo1.jpeg");
 
   div {
     width: 100%;
@@ -60,9 +60,12 @@
       text-align: center;
       text-transform: uppercase;
       font-size: 10px;
-      -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-      animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      -webkit-animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both, heartbeat 2.5s ease-in-out infinite both;
+      animation: fade-in 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both, heartbeat 2.5s ease-in-out infinite both;
       animation-delay: 2.5s;
+      font-weight: 700;
+      cursor: pointer;
+
     }
   }
 }
@@ -375,5 +378,74 @@
     -webkit-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+}
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+            transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+            transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+            transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
   }
 }
