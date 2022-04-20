@@ -1,23 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./home.scss";
 import { NavLink } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
-  //   const Fade = require("react-reveal/Fade");
+
+  // onClick go to description
+  const infoRef: any = useRef(null);
+  const executeScroll = () => {
+    infoRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="home-container">
       <div className="photo">
-        <div>
+        <div onClick={executeScroll}>
           <h1>TYGRYS</h1>
           <h2>Unikalne drzwi do twojego wnętrza</h2>
           <h3>czytaj więcej...</h3>
         </div>
       </div>
-      <section className="info-1">
+      <section ref={infoRef} className="info-1">
         <div className="description-box">
-          <Fade direction={"left"}>
+          <Fade triggerOnce={true} direction={"left"}>
             <h2>U nas możesz spodziewać się najwyższej jakośći</h2>
           </Fade>
         </div>
@@ -39,7 +44,7 @@ const Home = () => {
       </section>
       <section className="info-2">
         <div className="description-box">
-          <Fade direction={"right"}>
+          <Fade triggerOnce={true} direction={"right"}>
             <h2>Dostosujemy się do twojej framugi</h2>
           </Fade>
         </div>
@@ -61,7 +66,7 @@ const Home = () => {
       </section>
       <section className="info-3">
         <div className="description-box">
-          <Fade direction={"up"}>
+          <Fade triggerOnce={true} direction={"up"}>
             <h2>Skontaktuj się z nami. Jesteśmy dostępni chetnie pomozemy</h2>
           </Fade>
         </div>
