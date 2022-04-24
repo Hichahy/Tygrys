@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 
 const Home = () => {
-
   // onClick go to description
   const infoRef: any = useRef(null);
   const executeScroll = () => {
@@ -14,11 +13,11 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="photo">
-        <div onClick={executeScroll}>
+        <div>
           <h1>TYGRYS</h1>
           <h2>Unikalne drzwi do twojego wnętrza</h2>
-          <h3>czytaj więcej...</h3>
         </div>
+        <button onClick={executeScroll}>czytaj więcej...</button>
       </div>
       <section ref={infoRef} className="info-1">
         <div className="description-box">
