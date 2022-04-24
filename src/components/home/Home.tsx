@@ -57,7 +57,7 @@ const Home = () => {
         </div>
         <div className="paragraph-2">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id magnam
+            Wersja Beta dolor sit amet consectetur adipisicing elit. Id magnam
             ab quibusdam. Alias maiores, assumenda debitis ipsam necessitatibus,
             minus voluptates voluptatum accusantium ipsa nesciunt fugiat quasi
             nulla sit molestias adipisci!
