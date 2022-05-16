@@ -4,7 +4,7 @@ import "./photoSlider.scss";
 import { Fade } from "react-awesome-reveal";
 
 interface IProps {
-  id: number;
+  id: string;
   image: string;
   title: string;
   quote: string;

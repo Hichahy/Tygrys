@@ -3,13 +3,14 @@ import "./products.scss";
 import slidersPhoto from "../../layout/photoSlider/sliderdata";
 import PhotoSlider from "../../layout/photoSlider/PhotoSlider";
 import { Fade } from "react-awesome-reveal";
+import { Link } from 'react-router-dom'
 
 const Products = () => {
   const [sliders] = useState(slidersPhoto);
   const [indexSlider, setIndexSlider] = useState(0);
 
   return (
-    <div className="product-container">
+    <div className="products-container">
       <div className="slider">
         {sliders.map((slide, photoIndex) => {
           return (
@@ -32,18 +33,20 @@ const Products = () => {
       </button>
       <section className="shop-carts">
         {sliders.map((i) => (
-          <Fade triggerOnce={true} key={i.id}>
-            <div className="cart">
-              <img
-              src={i.image}
-               onMouseEnter={(e) => e.currentTarget.src  = i.imageHover}
-               onMouseLeave={(e) => e.currentTarget.src = i.image}
-                alt={i.title}
-              />
-              <h1>{i.title}</h1>
-              <p>{i.quote}</p>
-            </div>
-          </Fade>
+          <Link key={i.id} to={`/produkt/${i.id}`}>
+            <Fade triggerOnce={true} >
+              <div className="cart">
+                <img
+                  src={i.image}
+                  onMouseEnter={(e) => (e.currentTarget.src = i.imageHover)}
+                  onMouseLeave={(e) => (e.currentTarget.src = i.image)}
+                  alt={i.title}
+                />
+                <h1>{i.title}</h1>
+                <p>{i.quote}</p>
+              </div>
+            </Fade>
+          </Link>
         ))}
       </section>
     </div>
