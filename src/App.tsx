@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import Products from "./components/products/Products";
 import "./App.scss";
 import Footer from "./components/footer/Footer";
+import Product from "./components/Product/Product";
 
 const App = () => {
   //go up on change location
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/produkt/:id" element={<Product />} />
       </Routes>
       <Footer />
     </div>
